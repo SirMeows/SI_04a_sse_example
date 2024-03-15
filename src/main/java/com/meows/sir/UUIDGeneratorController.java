@@ -25,7 +25,7 @@ public class UUIDGeneratorController {
                 .map(sequence -> ServerSentEvent.<String> builder()
                         .id(String.valueOf(sequence))
                         .event("periodic-event")
-                        .data("SSE - " + UUID.randomUUID())
+                        .data("Random UUID - " + UUID.randomUUID())
                         .build()
                 );
     }
